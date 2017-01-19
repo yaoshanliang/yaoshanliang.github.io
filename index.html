@@ -125,6 +125,75 @@
       <div class="body-wrap">
         
   
+    <article id="post-weapp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/weapp.html">小程序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>简单学习了下，写了个<a href="https://github.com/yaoshanliang/weapp-ssha" target="_blank" rel="external">盛世华安小程序</a>，已审核上线。</p>
+<p>使用微信开发者工具可以新建一个<strong>quickstart</strong>的项目，扫了一遍目录结构和代码，发现这家伙长的跟<strong>react native</strong>还挺像的，不过没有对android和ios分开处理，毕竟小程序是基于微信，跨平台的处理交由微信就行了，这样一来小程序的门槛就比react native低很多了。</p>
+<p>第一版采用的是静态页面，主要是为了走一遍流程。不过提交后，发现了一个小bug，想修复后重新提交。但是，当前审核中的小程序是不能撤销的，也就是必须等当前版本审核完成才能提交新的版本。</p>
+<p>第二版采用的是动态页面，通过wordpress的<a href="https://wordpress.org/plugins/json-api/" target="_blank" rel="external">JSON API</a>插件提供公司官网数据，然后调用小程序的<code>wx.request()</code>去获取数据，并且<code>wx.request</code>发起的是HTTPS请求，需要在小程序的开发者平台中添加可访问的域名，当然开发版可以在微信开发者工具中勾选<em>“开发环境不校验请求域名以及TLS版本”</em>。</p>
+<p>另一点需要提到的是，小程序还没有提供webview的api，这也就需要第三方的库，开发中采用的是<a href="https://github.com/icindy/wxParse" target="_blank" rel="external">wxParse</a>，调用<code>WxParse.wxParse(&#39;article&#39;, &#39;html&#39;, article, that, 5);</code>即可。</p>
+<hr>
+<ul>
+<li><p>扫码访问<br><img src="http://iat.net.cn/images/weapp-ssha-qrcode.jpg" alt=""></p>
+</li>
+<li><p>预览<br><img src="http://iat.net.cn/images/weapp-ssha-1.png" alt=""><br><img src="http://iat.net.cn/images/weapp-ssha-log.png" alt=""></p>
+</li>
+</ul>
+<p>小程序发布后，有说是前端开发者的春天，也有抨击小程序的，这里不做评论，吃瓜移步<a href="https://www.zhihu.com/topic/20061410/hot" target="_blank" rel="external">知乎</a>。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/weapp.html" class="archive-article-date">
+  	<time datetime="2017-01-13T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-01-13</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weapp/">Weapp</a></li></ul>
+	</div>
+
+<!--
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/Project/">Project</a>
+	</div>
+
+
+-->
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-ucenter-userlog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -659,68 +728,9 @@
 
 
   
-    <article id="post-html5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/html5.html">HTML5初识</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>HTML5的标准已经制定完成，在web界掀起了一股热潮，也引发了html5 web app与native app的生死之争。最近学习了解了一下html5的知识，本文是一些个人的总结感想，系统学习还请参考官方教程。</p>
-        <p class="article-more-link">
-          <a  href="/html5.html#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/html5.html" class="archive-article-date">
-  	<time datetime="2014-12-29T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-12-29</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
-	</div>
-
-<!--
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/Study/">Study</a>
-	</div>
-
-
--->
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -802,7 +812,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Ajax/" style="font-size: 12px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 12px;">Blog</a> <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/DWZ/" style="font-size: 12px;">DWZ</a> <a href="/tags/FuelPHP/" style="font-size: 14px;">FuelPHP</a> <a href="/tags/HTML/" style="font-size: 18px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Tool/" style="font-size: 10px;">Tool</a> <a href="/tags/UCenter/" style="font-size: 10px;">UCenter</a> <a href="/tags/WebSocket/" style="font-size: 14px;">WebSocket</a> <a href="/tags/Wechat/" style="font-size: 16px;">Wechat</a>
+    				<a href="/tags/Ajax/" style="font-size: 12px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 12px;">Blog</a> <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/DWZ/" style="font-size: 12px;">DWZ</a> <a href="/tags/FuelPHP/" style="font-size: 14px;">FuelPHP</a> <a href="/tags/HTML/" style="font-size: 18px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Tool/" style="font-size: 10px;">Tool</a> <a href="/tags/UCenter/" style="font-size: 10px;">UCenter</a> <a href="/tags/Weapp/" style="font-size: 10px;">Weapp</a> <a href="/tags/WebSocket/" style="font-size: 14px;">WebSocket</a> <a href="/tags/Wechat/" style="font-size: 16px;">Wechat</a>
     			</div>
     	</section>
     
