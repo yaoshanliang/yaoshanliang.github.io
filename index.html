@@ -149,43 +149,9 @@ user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
 </code></pre><p>  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）</p>
-<h3 id="2、创建web服务器用户目录"><a href="#2、创建web服务器用户目录" class="headerlink" title="2、创建web服务器用户目录"></a>2、创建web服务器用户目录</h3><pre><code>sudo mkdir /var/www/html/.ssh
-sudo chown -R www-data:www-data /var/www/html/.ssh/
-</code></pre><h3 id="3、修改web目录用户权限"><a href="#3、修改web目录用户权限" class="headerlink" title="3、修改web目录用户权限"></a>3、修改web目录用户权限</h3><pre><code>sudo chown -R www-data:www-data /var/www/html
-</code></pre><h3 id="4、准备钩子文件"><a href="#4、准备钩子文件" class="headerlink" title="4、准备钩子文件"></a>4、准备钩子文件</h3><p> 在web目录html下建立一个目录githook, 里面放上一个php文件index.php，并确保该项目可以被外部访问，如<code>http://example.com/githook/index.php</code></p>
-<pre><code>&lt;?php
-
-    error_reporting(1);
-
-    $root = &apos;/var/www/html/&apos;; // 服务器目录
-    $token = &apos;coding&apos;; // token
-    $wwwUser = &apos;www-data&apos;; //nginx所属用户
-    $wwwGroup = &apos;www&apos;;
-
-    $json = json_decode(file_get_contents(&apos;php://input&apos;), true);
-
-    if (empty($json[&apos;token&apos;]) || $json[&apos;token&apos;] !== $token) {
-        exit(&apos;error request&apos;);
-    }
-
-    if (! ($repo = $_GET[&apos;repo&apos;])) {
-        $repo = $json[&apos;repository&apos;][&apos;name&apos;];
-    }
-
-    $folder = $root . $repo;
-
-    $cmd = &quot;cd $folder &amp;&amp; git pull&quot;;
-
-    $res = shell_exec($cmd);
-
-    var_dump($res);
-</code></pre><h3 id="5、生成部署公钥"><a href="#5、生成部署公钥" class="headerlink" title="5、生成部署公钥"></a>5、生成部署公钥</h3><p>  粘贴公钥至git平台（如：coding，注意：粘贴至部署公钥，非个人公钥）</p>
-<pre><code>sudo -Hu www-data ssh-keygen -t rsa # 请选择 &quot;no passphrase&quot;，一直回车下去
-sudo cat /var/www/html/.ssh/id_rsa.pub
-</code></pre><h3 id="6、clone项目"><a href="#6、clone项目" class="headerlink" title="6、clone项目"></a>6、clone项目</h3><p>  我们需要先在服务器上clone一次，以后都可以实现自动部署了：</p>
-<pre><code>sudo -Hu www-data git clone git@git.coding.net:you/repo.git
-</code></pre><h3 id="7、测试"><a href="#7、测试" class="headerlink" title="7、测试"></a>7、测试</h3><p>  本地推送代码，看看线上有没有自动部署</p>
-
+        <p class="article-more-link">
+          <a  href="/git-hook.html#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -242,115 +208,11 @@ sudo cat /var/www/html/.ssh/id_rsa.pub
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1、安装系统环境（基于Ubuntu-16-04）"><a href="#1、安装系统环境（基于Ubuntu-16-04）" class="headerlink" title="1、安装系统环境（基于Ubuntu 16.04）"></a>1、安装系统环境（基于Ubuntu 16.04）</h2><ul>
-<li><p>更新系统</p>
-<pre><code>apt-get update
-</code></pre></li>
-<li><p>安装git</p>
-<pre><code>apt-get install git
-
-git --version
-#git version 2.7.4
-</code></pre><ul>
-<li><p>安装nginx </p>
-<pre><code>apt-get install nginx
-
-nginx -v
-#nginx version: nginx/1.10.3 (Ubuntu)
-</code></pre></li>
-<li><p>安装mysql</p>
-<pre><code>apt-get install mysql-server
-
-mysql -V
-#mysql  Ver 14.14 Distrib 5.7.18
-</code></pre></li>
+<li>更新系统</li>
 </ul>
-</li>
-<li><p>安装php7.0</p>
-<pre><code>apt-get install php7.0 php7.0-*
-apt-get install snmp
-
-php -v
-#PHP 7.0.18-0ubuntu0.16.04.1 (cli) ( NTS )
-
-# 修改php上传文件限制
-vi /etc/php/7.0/fpm/php.ini
-post_max_size = 20M
-upload_max_filesize = 20M
-
-# 重启fpm
-service php7.0-fpm restart
-</code></pre><ul>
-<li><p>安装composer</p>
-<pre><code>php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;
-php composer-setup.php
-php -r &quot;unlink(&apos;composer-setup.php&apos;);&quot;
-sudo mv composer.phar /usr/local/bin/composer
-composer -V
-# Composer version 1.4.2
-</code></pre></li>
-</ul>
-</li>
-</ul>
-<h2 id="2、部署代码"><a href="#2、部署代码" class="headerlink" title="2、部署代码"></a>2、部署代码</h2><ul>
-<li><p>clone 代码</p>
-<pre><code>cd /var/www/html
-git clone https://git.coding.net/iat/example.git example
-</code></pre></li>
-<li><p>代码依赖</p>
-<pre><code>cd example
-composer install
-</code></pre></li>
-<li><p>代码配置</p>
-<pre><code>cd example
-chmod -R 777 storage
-chmod -R 777 bootstrap
-chmod -R 777 public/storage
-cp .env.example .env
-vi .env
-#修改对应的数据库配置
-
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-</code></pre></li>
-<li><p>nginx 配置</p>
-<pre><code>vi /etc/nginx/sites-available/default
-
-server {
-    listen 80;
-
-    root /var/www/html/example/public;
-          client_max_body_size 20M;
-          index index.php index.html index.htm index.nginx-debian.html;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location ~ \.php$ {
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-        include fastcgi_params;
-    }
-}
-
-sudo service nginx restart
-</code></pre></li>
-<li><p>允许mysql远程访问</p>
-<pre><code>vi /etc/mysql/mysql.conf.d/mysqld.cnf
-bind-address            = 0.0.0.0
-
-# 登录mysql
-GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;
-FLUSH PRIVILEGES
-</code></pre></li>
-<li><p>访问</p>
-<pre><code>前台：IP(域名)
-后台：IP(域名)/admin 账户：admin 密码：admin
-</code></pre></li>
-</ul>
-
+        <p class="article-more-link">
+          <a  href="/php-ubuntu.html#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">

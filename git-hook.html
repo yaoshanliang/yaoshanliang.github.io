@@ -11,9 +11,7 @@
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
-  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
-2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
-sudo chown -R www-data:ww">
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git自动部署">
 <meta property="og:url" content="http://iat.net.cn/git-hook.html">
@@ -23,10 +21,8 @@ sudo chown -R www-data:ww">
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
-  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
-2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
-sudo chown -R www-data:ww">
-<meta property="og:updated_time" content="2018-03-03T09:34:46.064Z">
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）">
+<meta property="og:updated_time" content="2018-03-03T09:37:53.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git自动部署">
 <meta name="twitter:description" content="1、查看nginx所属用户vi /etc/nginx/nginx.conf
@@ -34,9 +30,7 @@ sudo chown -R www-data:ww">
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
-  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
-2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
-sudo chown -R www-data:ww">
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）">
   
     <link rel="alternative" href="/atom.xml" title="iat" type="application/atom+xml">
   
@@ -172,6 +166,7 @@ user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
 </code></pre><p>  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）</p>
+<a id="more"></a>
 <h3 id="2、创建web服务器用户目录"><a href="#2、创建web服务器用户目录" class="headerlink" title="2、创建web服务器用户目录"></a>2、创建web服务器用户目录</h3><pre><code>sudo mkdir /var/www/html/.ssh
 sudo chown -R www-data:www-data /var/www/html/.ssh/
 </code></pre><h3 id="3、修改web目录用户权限"><a href="#3、修改web目录用户权限" class="headerlink" title="3、修改web目录用户权限"></a>3、修改web目录用户权限</h3><pre><code>sudo chown -R www-data:www-data /var/www/html
