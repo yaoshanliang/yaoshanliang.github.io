@@ -4,22 +4,69 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Apache服务器禁止访问网站文件目录的方法 | iat</title>
+  <title>PHP环境安装(ubuntu) | iat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
+  <meta name="description" content="1、安装系统环境（基于Ubuntu 16.04）
+更新系统
+apt-get update
+
+安装git
+apt-get install git
+
+git --version
+#git version 2.7.4
+
+安装nginx 
+apt-get install nginx
+
+nginx -v
+#nginx version: nginx/1.10.3 (Ubuntu)
+
+安装mysql
+apt-g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache服务器禁止访问网站文件目录的方法">
-<meta property="og:url" content="http://iat.net.cn/prohibit-access-to-websites-file-directory-in-apache-server.html">
+<meta property="og:title" content="PHP环境安装(ubuntu)">
+<meta property="og:url" content="http://iat.net.cn/php-ubuntu.html">
 <meta property="og:site_name" content="iat">
-<meta property="og:description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_1.jpg">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_2.jpg">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_3.jpg">
-<meta property="og:updated_time" content="2017-01-12T13:49:03.000Z">
+<meta property="og:description" content="1、安装系统环境（基于Ubuntu 16.04）
+更新系统
+apt-get update
+
+安装git
+apt-get install git
+
+git --version
+#git version 2.7.4
+
+安装nginx 
+apt-get install nginx
+
+nginx -v
+#nginx version: nginx/1.10.3 (Ubuntu)
+
+安装mysql
+apt-g">
+<meta property="og:updated_time" content="2018-03-03T09:33:00.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Apache服务器禁止访问网站文件目录的方法">
-<meta name="twitter:description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
-<meta name="twitter:image" content="http://iat.net.cn/images/Apache_1.jpg">
+<meta name="twitter:title" content="PHP环境安装(ubuntu)">
+<meta name="twitter:description" content="1、安装系统环境（基于Ubuntu 16.04）
+更新系统
+apt-get update
+
+安装git
+apt-get install git
+
+git --version
+#git version 2.7.4
+
+安装nginx 
+apt-get install nginx
+
+nginx -v
+#nginx version: nginx/1.10.3 (Ubuntu)
+
+安装mysql
+apt-g">
   
     <link rel="alternative" href="/atom.xml" title="iat" type="application/atom+xml">
   
@@ -131,7 +178,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-prohibit-access-to-websites-file-directory-in-apache-server" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-php-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -141,7 +188,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Apache服务器禁止访问网站文件目录的方法
+      PHP环境安装(ubuntu)
     </h1>
   
 
@@ -149,26 +196,127 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。</p>
-<a id="more"></a>
-<p>在安装Apache的目录../apache/conf文件夹里找到httpd.conf文件。在第223行，</p>
-<p><img src="/images/Apache_1.jpg" alt=""></p>
-<p>去掉Indexes，保存后重启Apache服务器</p>
-<p><img src="/images/Apache_2.jpg" alt=""></p>
-<p>就可以发现Access forbidden!页面了。</p>
-<p><img src="/images/Apache_3.jpg" alt=""></p>
+        <h2 id="1、安装系统环境（基于Ubuntu-16-04）"><a href="#1、安装系统环境（基于Ubuntu-16-04）" class="headerlink" title="1、安装系统环境（基于Ubuntu 16.04）"></a>1、安装系统环境（基于Ubuntu 16.04）</h2><ul>
+<li><p>更新系统</p>
+<pre><code>apt-get update
+</code></pre></li>
+<li><p>安装git</p>
+<pre><code>apt-get install git
+
+git --version
+#git version 2.7.4
+</code></pre><ul>
+<li><p>安装nginx </p>
+<pre><code>apt-get install nginx
+
+nginx -v
+#nginx version: nginx/1.10.3 (Ubuntu)
+</code></pre></li>
+<li><p>安装mysql</p>
+<pre><code>apt-get install mysql-server
+
+mysql -V
+#mysql  Ver 14.14 Distrib 5.7.18
+</code></pre></li>
+</ul>
+</li>
+<li><p>安装php7.0</p>
+<pre><code>apt-get install php7.0 php7.0-*
+apt-get install snmp
+
+php -v
+#PHP 7.0.18-0ubuntu0.16.04.1 (cli) ( NTS )
+
+# 修改php上传文件限制
+vi /etc/php/7.0/fpm/php.ini
+post_max_size = 20M
+upload_max_filesize = 20M
+
+# 重启fpm
+service php7.0-fpm restart
+</code></pre><ul>
+<li><p>安装composer</p>
+<pre><code>php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;
+php composer-setup.php
+php -r &quot;unlink(&apos;composer-setup.php&apos;);&quot;
+sudo mv composer.phar /usr/local/bin/composer
+composer -V
+# Composer version 1.4.2
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="2、部署代码"><a href="#2、部署代码" class="headerlink" title="2、部署代码"></a>2、部署代码</h2><ul>
+<li><p>clone 代码</p>
+<pre><code>cd /var/www/html
+git clone https://git.coding.net/iat/example.git example
+</code></pre></li>
+<li><p>代码依赖</p>
+<pre><code>cd example
+composer install
+</code></pre></li>
+<li><p>代码配置</p>
+<pre><code>cd example
+chmod -R 777 storage
+chmod -R 777 bootstrap
+chmod -R 777 public/storage
+cp .env.example .env
+vi .env
+#修改对应的数据库配置
+
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+</code></pre></li>
+<li><p>nginx 配置</p>
+<pre><code>vi /etc/nginx/sites-available/default
+
+server {
+    listen 80;
+
+    root /var/www/html/example/public;
+          client_max_body_size 20M;
+          index index.php index.html index.htm index.nginx-debian.html;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        include fastcgi_params;
+    }
+}
+
+sudo service nginx restart
+</code></pre></li>
+<li><p>允许mysql远程访问</p>
+<pre><code>vi /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address            = 0.0.0.0
+
+# 登录mysql
+GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;
+FLUSH PRIVILEGES
+</code></pre></li>
+<li><p>访问</p>
+<pre><code>前台：IP(域名)
+后台：IP(域名)/admin 账户：admin 密码：admin
+</code></pre></li>
+</ul>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/prohibit-access-to-websites-file-directory-in-apache-server.html" class="archive-article-date">
-  	<time datetime="2014-02-15T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-02-15</time>
+      <a href="/php-ubuntu.html" class="archive-article-date">
+  	<time datetime="2017-07-24T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-24</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
 	</div>
 
 <!--
@@ -188,18 +336,18 @@
   
 <nav id="article-nav">
   
-    <a href="/import-database-by-excel-in-project-fpp.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/git-hook.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          防攀爬系统——EXCEL导入数据库
+          Git自动部署
         
       </div>
     </a>
   
   
-    <a href="/create-qrcode-in-wechat.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信开发日记——生成带参数二维码</div>
+    <a href="/mac-php.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mac php php-fpm nginx mysql 安装</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -233,7 +381,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="prohibit-access-to-websites-file-directory-in-apache-server" data-title="Apache服务器禁止访问网站文件目录的方法" data-url="http://iat.net.cn/prohibit-access-to-websites-file-directory-in-apache-server.html"></div>
+	<div class="ds-thread" data-thread-key="php-ubuntu" data-title="PHP环境安装(ubuntu)" data-url="http://iat.net.cn/php-ubuntu.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

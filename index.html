@@ -125,6 +125,269 @@
       <div class="body-wrap">
         
   
+    <article id="post-git-hook" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/git-hook.html">Git自动部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、查看nginx所属用户"><a href="#1、查看nginx所属用户" class="headerlink" title="1、查看nginx所属用户"></a>1、查看nginx所属用户</h3><pre><code>vi /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+</code></pre><p>  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）</p>
+<h3 id="2、创建web服务器用户目录"><a href="#2、创建web服务器用户目录" class="headerlink" title="2、创建web服务器用户目录"></a>2、创建web服务器用户目录</h3><pre><code>sudo mkdir /var/www/html/.ssh
+sudo chown -R www-data:www-data /var/www/html/.ssh/
+</code></pre><h3 id="3、修改web目录用户权限"><a href="#3、修改web目录用户权限" class="headerlink" title="3、修改web目录用户权限"></a>3、修改web目录用户权限</h3><pre><code>sudo chown -R www-data:www-data /var/www/html
+</code></pre><h3 id="4、准备钩子文件"><a href="#4、准备钩子文件" class="headerlink" title="4、准备钩子文件"></a>4、准备钩子文件</h3><p> 在web目录html下建立一个目录githook, 里面放上一个php文件index.php，并确保该项目可以被外部访问，如<code>http://example.com/githook/index.php</code></p>
+<pre><code>&lt;?php
+
+    error_reporting(1);
+
+    $root = &apos;/var/www/html/&apos;; // 服务器目录
+    $token = &apos;coding&apos;; // token
+    $wwwUser = &apos;www-data&apos;; //nginx所属用户
+    $wwwGroup = &apos;www&apos;;
+
+    $json = json_decode(file_get_contents(&apos;php://input&apos;), true);
+
+    if (empty($json[&apos;token&apos;]) || $json[&apos;token&apos;] !== $token) {
+        exit(&apos;error request&apos;);
+    }
+
+    if (! ($repo = $_GET[&apos;repo&apos;])) {
+        $repo = $json[&apos;repository&apos;][&apos;name&apos;];
+    }
+
+    $folder = $root . $repo;
+
+    $cmd = &quot;cd $folder &amp;&amp; git pull&quot;;
+
+    $res = shell_exec($cmd);
+
+    var_dump($res);
+</code></pre><h3 id="5、生成部署公钥"><a href="#5、生成部署公钥" class="headerlink" title="5、生成部署公钥"></a>5、生成部署公钥</h3><p>  粘贴公钥至git平台（如：coding，注意：粘贴至部署公钥，非个人公钥）</p>
+<pre><code>sudo -Hu www-data ssh-keygen -t rsa # 请选择 &quot;no passphrase&quot;，一直回车下去
+sudo cat /var/www/html/.ssh/id_rsa.pub
+</code></pre><h3 id="6、clone项目"><a href="#6、clone项目" class="headerlink" title="6、clone项目"></a>6、clone项目</h3><p>  我们需要先在服务器上clone一次，以后都可以实现自动部署了：</p>
+<pre><code>sudo -Hu www-data git clone git@git.coding.net:you/repo.git
+</code></pre><h3 id="7、测试"><a href="#7、测试" class="headerlink" title="7、测试"></a>7、测试</h3><p>  本地推送代码，看看线上有没有自动部署</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/git-hook.html" class="archive-article-date">
+  	<time datetime="2017-12-24T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-12-24</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+	</div>
+
+<!--
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/Study/">Study</a>
+	</div>
+
+
+-->
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-php-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/php-ubuntu.html">PHP环境安装(ubuntu)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、安装系统环境（基于Ubuntu-16-04）"><a href="#1、安装系统环境（基于Ubuntu-16-04）" class="headerlink" title="1、安装系统环境（基于Ubuntu 16.04）"></a>1、安装系统环境（基于Ubuntu 16.04）</h2><ul>
+<li><p>更新系统</p>
+<pre><code>apt-get update
+</code></pre></li>
+<li><p>安装git</p>
+<pre><code>apt-get install git
+
+git --version
+#git version 2.7.4
+</code></pre><ul>
+<li><p>安装nginx </p>
+<pre><code>apt-get install nginx
+
+nginx -v
+#nginx version: nginx/1.10.3 (Ubuntu)
+</code></pre></li>
+<li><p>安装mysql</p>
+<pre><code>apt-get install mysql-server
+
+mysql -V
+#mysql  Ver 14.14 Distrib 5.7.18
+</code></pre></li>
+</ul>
+</li>
+<li><p>安装php7.0</p>
+<pre><code>apt-get install php7.0 php7.0-*
+apt-get install snmp
+
+php -v
+#PHP 7.0.18-0ubuntu0.16.04.1 (cli) ( NTS )
+
+# 修改php上传文件限制
+vi /etc/php/7.0/fpm/php.ini
+post_max_size = 20M
+upload_max_filesize = 20M
+
+# 重启fpm
+service php7.0-fpm restart
+</code></pre><ul>
+<li><p>安装composer</p>
+<pre><code>php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;
+php composer-setup.php
+php -r &quot;unlink(&apos;composer-setup.php&apos;);&quot;
+sudo mv composer.phar /usr/local/bin/composer
+composer -V
+# Composer version 1.4.2
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="2、部署代码"><a href="#2、部署代码" class="headerlink" title="2、部署代码"></a>2、部署代码</h2><ul>
+<li><p>clone 代码</p>
+<pre><code>cd /var/www/html
+git clone https://git.coding.net/iat/example.git example
+</code></pre></li>
+<li><p>代码依赖</p>
+<pre><code>cd example
+composer install
+</code></pre></li>
+<li><p>代码配置</p>
+<pre><code>cd example
+chmod -R 777 storage
+chmod -R 777 bootstrap
+chmod -R 777 public/storage
+cp .env.example .env
+vi .env
+#修改对应的数据库配置
+
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+</code></pre></li>
+<li><p>nginx 配置</p>
+<pre><code>vi /etc/nginx/sites-available/default
+
+server {
+    listen 80;
+
+    root /var/www/html/example/public;
+          client_max_body_size 20M;
+          index index.php index.html index.htm index.nginx-debian.html;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        include fastcgi_params;
+    }
+}
+
+sudo service nginx restart
+</code></pre></li>
+<li><p>允许mysql远程访问</p>
+<pre><code>vi /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address            = 0.0.0.0
+
+# 登录mysql
+GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;
+FLUSH PRIVILEGES
+</code></pre></li>
+<li><p>访问</p>
+<pre><code>前台：IP(域名)
+后台：IP(域名)/admin 账户：admin 密码：admin
+</code></pre></li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/php-ubuntu.html" class="archive-article-date">
+  	<time datetime="2017-07-24T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-24</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+	</div>
+
+<!--
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/Study/">Study</a>
+	</div>
+
+
+-->
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-mac-php" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -602,124 +865,6 @@
 
 
   
-    <article id="post-websocket-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/websocket-2.html">WebSocket(二)——WebSocket API</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>WebSocket API 是完全事件驱动的，一旦建立起全双工连接，当服务端需要发送数据给客户端时，就会自动发送，而不需要客户端的主动请求。目前，不同浏览器对WebSocket的支持度不同，可以通过javascript<code>if(window.WebSocket)</code>来进行判断，或者在console里输入<code>window.WebSocket</code>检测，或者在<a href="http://html5test.com/">html5test</a>里查看。</p>
-        <p class="article-more-link">
-          <a  href="/websocket-2.html#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/websocket-2.html" class="archive-article-date">
-  	<time datetime="2015-03-02T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-03-02</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebSocket/">WebSocket</a></li></ul>
-	</div>
-
-<!--
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/Study/">Study</a>
-	</div>
-
-
--->
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-websocket-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/websocket-3.html">WebSocket(三)——WebSocket协议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="连接握手"><a href="#连接握手" class="headerlink" title="连接握手"></a>连接握手</h4><p>每个WebSocket连接都始于一个HTTP请求，该请求包含特殊的首标<code>Upgrade</code>、<code>Sec-WebSocket-Key</code>。服务端响应<code>101</code>代码、<code>Connection</code>、<code>Upgrade</code>、<code>Sec-WebSocket-Accept</code>。</p>
-        <p class="article-more-link">
-          <a  href="/websocket-3.html#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/websocket-3.html" class="archive-article-date">
-  	<time datetime="2015-03-02T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-03-02</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebSocket/">WebSocket</a></li></ul>
-	</div>
-
-<!--
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/Study/">Study</a>
-	</div>
-
-
--->
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -732,7 +877,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2013-2017 iat
+    		&copy; 2013-2018 iat
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/yaoshanliang/hexo-theme-yilia" target="_blank">Yilia</a>
@@ -804,7 +949,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Ajax/" style="font-size: 12px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 12px;">Blog</a> <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/DWZ/" style="font-size: 12px;">DWZ</a> <a href="/tags/FuelPHP/" style="font-size: 14px;">FuelPHP</a> <a href="/tags/HTML/" style="font-size: 18px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Tool/" style="font-size: 10px;">Tool</a> <a href="/tags/UCenter/" style="font-size: 10px;">UCenter</a> <a href="/tags/Weapp/" style="font-size: 10px;">Weapp</a> <a href="/tags/WebSocket/" style="font-size: 14px;">WebSocket</a> <a href="/tags/Wechat/" style="font-size: 16px;">Wechat</a>
+    				<a href="/tags/Ajax/" style="font-size: 12px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 12px;">Blog</a> <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/DWZ/" style="font-size: 12px;">DWZ</a> <a href="/tags/FuelPHP/" style="font-size: 14px;">FuelPHP</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 18px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Tool/" style="font-size: 10px;">Tool</a> <a href="/tags/UCenter/" style="font-size: 10px;">UCenter</a> <a href="/tags/Weapp/" style="font-size: 10px;">Weapp</a> <a href="/tags/WebSocket/" style="font-size: 14px;">WebSocket</a> <a href="/tags/Wechat/" style="font-size: 16px;">Wechat</a>
     			</div>
     	</section>
     

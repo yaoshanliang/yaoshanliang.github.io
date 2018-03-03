@@ -4,22 +4,39 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Apache服务器禁止访问网站文件目录的方法 | iat</title>
+  <title>Git自动部署 | iat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
+  <meta name="description" content="1、查看nginx所属用户vi /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
+2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
+sudo chown -R www-data:ww">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache服务器禁止访问网站文件目录的方法">
-<meta property="og:url" content="http://iat.net.cn/prohibit-access-to-websites-file-directory-in-apache-server.html">
+<meta property="og:title" content="Git自动部署">
+<meta property="og:url" content="http://iat.net.cn/git-hook.html">
 <meta property="og:site_name" content="iat">
-<meta property="og:description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_1.jpg">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_2.jpg">
-<meta property="og:image" content="http://iat.net.cn/images/Apache_3.jpg">
-<meta property="og:updated_time" content="2017-01-12T13:49:03.000Z">
+<meta property="og:description" content="1、查看nginx所属用户vi /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
+2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
+sudo chown -R www-data:ww">
+<meta property="og:updated_time" content="2018-03-03T09:34:46.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Apache服务器禁止访问网站文件目录的方法">
-<meta name="twitter:description" content="用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。">
-<meta name="twitter:image" content="http://iat.net.cn/images/Apache_1.jpg">
+<meta name="twitter:title" content="Git自动部署">
+<meta name="twitter:description" content="1、查看nginx所属用户vi /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）
+2、创建web服务器用户目录sudo mkdir /var/www/html/.ssh
+sudo chown -R www-data:ww">
   
     <link rel="alternative" href="/atom.xml" title="iat" type="application/atom+xml">
   
@@ -131,7 +148,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-prohibit-access-to-websites-file-directory-in-apache-server" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-git-hook" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -141,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Apache服务器禁止访问网站文件目录的方法
+      Git自动部署
     </h1>
   
 
@@ -149,26 +166,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用本地的Apache作php服务器，发现链接为文件目录时会列出目录里的所有文件,这对于用于发布站点的服务器来说是很不安全的。这是因为该目录下内有index.php或index.html等默认页面，所以一定要禁用，下面就介绍实现的办法。</p>
-<a id="more"></a>
-<p>在安装Apache的目录../apache/conf文件夹里找到httpd.conf文件。在第223行，</p>
-<p><img src="/images/Apache_1.jpg" alt=""></p>
-<p>去掉Indexes，保存后重启Apache服务器</p>
-<p><img src="/images/Apache_2.jpg" alt=""></p>
-<p>就可以发现Access forbidden!页面了。</p>
-<p><img src="/images/Apache_3.jpg" alt=""></p>
+        <h3 id="1、查看nginx所属用户"><a href="#1、查看nginx所属用户" class="headerlink" title="1、查看nginx所属用户"></a>1、查看nginx所属用户</h3><pre><code>vi /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+</code></pre><p>  可以看到用户为www-data(注意：接下来的权限都要配置为该用户）</p>
+<h3 id="2、创建web服务器用户目录"><a href="#2、创建web服务器用户目录" class="headerlink" title="2、创建web服务器用户目录"></a>2、创建web服务器用户目录</h3><pre><code>sudo mkdir /var/www/html/.ssh
+sudo chown -R www-data:www-data /var/www/html/.ssh/
+</code></pre><h3 id="3、修改web目录用户权限"><a href="#3、修改web目录用户权限" class="headerlink" title="3、修改web目录用户权限"></a>3、修改web目录用户权限</h3><pre><code>sudo chown -R www-data:www-data /var/www/html
+</code></pre><h3 id="4、准备钩子文件"><a href="#4、准备钩子文件" class="headerlink" title="4、准备钩子文件"></a>4、准备钩子文件</h3><p> 在web目录html下建立一个目录githook, 里面放上一个php文件index.php，并确保该项目可以被外部访问，如<code>http://example.com/githook/index.php</code></p>
+<pre><code>&lt;?php
+
+    error_reporting(1);
+
+    $root = &apos;/var/www/html/&apos;; // 服务器目录
+    $token = &apos;coding&apos;; // token
+    $wwwUser = &apos;www-data&apos;; //nginx所属用户
+    $wwwGroup = &apos;www&apos;;
+
+    $json = json_decode(file_get_contents(&apos;php://input&apos;), true);
+
+    if (empty($json[&apos;token&apos;]) || $json[&apos;token&apos;] !== $token) {
+        exit(&apos;error request&apos;);
+    }
+
+    if (! ($repo = $_GET[&apos;repo&apos;])) {
+        $repo = $json[&apos;repository&apos;][&apos;name&apos;];
+    }
+
+    $folder = $root . $repo;
+
+    $cmd = &quot;cd $folder &amp;&amp; git pull&quot;;
+
+    $res = shell_exec($cmd);
+
+    var_dump($res);
+</code></pre><h3 id="5、生成部署公钥"><a href="#5、生成部署公钥" class="headerlink" title="5、生成部署公钥"></a>5、生成部署公钥</h3><p>  粘贴公钥至git平台（如：coding，注意：粘贴至部署公钥，非个人公钥）</p>
+<pre><code>sudo -Hu www-data ssh-keygen -t rsa # 请选择 &quot;no passphrase&quot;，一直回车下去
+sudo cat /var/www/html/.ssh/id_rsa.pub
+</code></pre><h3 id="6、clone项目"><a href="#6、clone项目" class="headerlink" title="6、clone项目"></a>6、clone项目</h3><p>  我们需要先在服务器上clone一次，以后都可以实现自动部署了：</p>
+<pre><code>sudo -Hu www-data git clone git@git.coding.net:you/repo.git
+</code></pre><h3 id="7、测试"><a href="#7、测试" class="headerlink" title="7、测试"></a>7、测试</h3><p>  本地推送代码，看看线上有没有自动部署</p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/prohibit-access-to-websites-file-directory-in-apache-server.html" class="archive-article-date">
-  	<time datetime="2014-02-15T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-02-15</time>
+      <a href="/git-hook.html" class="archive-article-date">
+  	<time datetime="2017-12-24T04:12:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-12-24</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 	</div>
 
 <!--
@@ -188,18 +239,9 @@
   
 <nav id="article-nav">
   
-    <a href="/import-database-by-excel-in-project-fpp.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          防攀爬系统——EXCEL导入数据库
-        
-      </div>
-    </a>
   
-  
-    <a href="/create-qrcode-in-wechat.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信开发日记——生成带参数二维码</div>
+    <a href="/php-ubuntu.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP环境安装(ubuntu)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -233,7 +275,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="prohibit-access-to-websites-file-directory-in-apache-server" data-title="Apache服务器禁止访问网站文件目录的方法" data-url="http://iat.net.cn/prohibit-access-to-websites-file-directory-in-apache-server.html"></div>
+	<div class="ds-thread" data-thread-key="git-hook" data-title="Git自动部署" data-url="http://iat.net.cn/git-hook.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
