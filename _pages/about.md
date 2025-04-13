@@ -23,20 +23,39 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 
 
 # 🔥 News
-- *2025.03*: &nbsp;🎉🎉 A survey for Radar Data Representations is accepted by TITS. 
+- *2025.03*: &nbsp;🎉🎉 A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908).
+- *2024.06*: &nbsp; A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852).
+- *2024.09*: &nbsp; Radar-Camera Fusion is a Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176).
+- *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711). 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TITS 2024</div><img src='images/WaterScenes.png' alt="" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TITS</div><img src='images/WaterScenes.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmarks for Autonomous Driving on Water Surfaces](https://ieeexplore.ieee.org/document/10571852)
 
 **Shanliang Yao**, Runwei Guan, Zhaodong Wu, Yi Ni, Ryan Wen Liu, Xiaohui Zhu, Yutao Yue etc.
-https://waterscenes.github.io
 
 [[website]](https://waterscenes.github.io) 
 [![](https://img.shields.io/github/stars/WaterScenes/WaterScenes?style=social&label=Code+Stars)](https://github.com/WaterScenes/WaterScenes) 
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:U_HPUtbDl20C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
+
+[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=SHLZ-cYAAAAJ:U_HPUtbDl20C) <strong><span class='show_paper_citations' data='SHLZ-cYAAAAJ:U_HPUtbDl20C'></span></strong>
+- The first 4D radar-camera fusion dataset in waterborne environment. 
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TITS</div><img src='images/RadarPerception.png' alt="" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Exploring Radar Data Representations in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10952908)
+
+**Shanliang Yao**, Runwei Guan, Xiaohui Zhu, Yutao Yue etc.
+
+[[Website]](https://radar-camera-fusion.github.io/radar) [Github](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Perception)
+[![](https://img.shields.io/github/stars/Radar-Camera-Fusion/Awesome-Radar-Perception?style=social&label=Code+Stars)](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Perception) 
 <img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:e84hm74t-eoC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
 
@@ -45,7 +64,29 @@ https://waterscenes.github.io
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TIV</div><img src='images/Radar-Camera-Fusion.png' alt="" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10225711)
+
+**Shanliang Yao**, Runwei Guan, Xiaohui Zhu, Yutao Yue etc.
+https://waterscenes.github.io
+
+[[website]](https://waterscenes.github.io) [Github](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Camera-Fusion)
+[![](https://img.shields.io/github/stars/Radar-Camera-Fusion/Awesome-Radar-Camera-Fusion?style=social&label=Code+Stars)](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Camera-Fusion) 
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:oTdOBqtIf_kC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
+
+[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- The first 4D radar-camera fusion dataset in waterborne environment. 
+</div>
+</div>
+
+- [WaterVG: Waterway Visual Grounding Based on Text-Guided Vision and mmWave Radar](https://ieeexplore.ieee.org/document/10847630/). Runwei Guan, Liye Jia, **Shanliang Yao**, Fengyufan Yang, Erick Purwanto, Xiaohui Zhu, Eng Gee Lim, Jeremy Smith, Ka Lok Man, Xuming Hu, Yutao Yue. IEEE Transactions on Intelligent Transportation Systems, 2025, Early Access, doi: 10.1109/TITS.2025.3527011.
+- [ASY-VRNet: Waterway Panoptic Driving Perception Model Based on Asymmetric Fair Fusion of Vision and 4D mmWave Radar](https://ieeexplore.ieee.org/document/10802447). Runwei Guan, **Shanliang Yao**, Xiaohui Zhu, Ka Lok Man, Yong Yue, Jeremy Smith, Eng Gee Lim, Yutao Yue. 2024 37th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), Abu Dhabi, United Arab Emirates, 2024, 12479-12486, doi: 10.1109/IROS58592.2024.10802447.
+- [Achelous: A Fast Unified Water-Surface Panoptic Perception Framework Based on Fusion of Monocular Camera and 4D mmWave Radar](https://ieeexplore.ieee.org/document/10422325). Runwei Guan, **Shanliang Yao**, Xiaohui Zhu, Ka Lok Man, Eng Gee Lim, Jeremy Smith, Yong Yue, Yutao Yue. 2023 IEEE 26th International Conference on Intelligent Transportation Systems (ITSC 2023), Bilbao, Spain, 2023, 182-188, doi: 10.1109/ITSC 57777.2023.10422325.
+- [Mask-VRDet: A Robust Riverway Panoptic Perception Model Based on Dual Graph Fusion of Vision and 4D mmWave Radar](https://www.sciencedirect.com/science/article/abs/pii/S0921889023002117). Runwei Guan, **Shanliang Yao**, Lulu Liu, Xiaohui Zhu, Ka Lok Man, Yong Yue, Jeremy Smith, Eng Gee Lim, Yutao Yue. Robotics and Autonomous Systems, 2024, 171: 104572, doi: 10.1016/j.robot.2023.104572.
 
 # 🎖 Honors and Awards
 - *2022.10* Internet+. 
