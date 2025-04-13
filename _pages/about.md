@@ -42,7 +42,6 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
 - The first multi-task 4D radar-camera fusion dataset on water surfaces, which offers data from multiple sensors, including a 4D radar, monocular camera, GPS, and IMU.
 - It can be applied in multiple tasks, such as object detection, instance segmentation, semantic segmentation, free-space segmentation, and waterline segmentation.
-- It covers diverse time conditions (daytime, nightfall, night), lighting conditions (normal, dim, strong), weather conditions (sunny, overcast, rainy, snowy) and waterway conditions (river, lake, canal, moat). 
 </div>
 </div>
 
@@ -57,7 +56,6 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 [![](https://img.shields.io/github/stars/Radar-Camera-Fusion/Awesome-Radar-Perception?style=social&label=Code+Stars)](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Perception) 
 <img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:e84hm74t-eoC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
-- The first review that explores different data representations for radar perception in autonomous driving.
 • We offer an up-to-date (2019-2024) overview of radar-based datasets and algorithms, providing in-depth research on their advantages and limitations.
 • We analyze the significant challenges and open questions related to these data representations, and propose potential research directions for further investigation.
 </div>
@@ -75,7 +73,6 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 [![](https://img.shields.io/github/stars/Radar-Camera-Fusion/Awesome-Radar-Camera-Fusion?style=social&label=Code+Stars)](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Camera-Fusion) 
 <img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:oTdOBqtIf_kC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
-- The first survey focusing on two fundamental perception problems for radar-camera fusion, namely, object detection and semantic segmentation.
 - We present an up-to-date (2019–2023) overview of radar-camera fusion datasets and algorithms, and conduct in-depth research on “why to fuse”, “what to fuse”, “where to fuse”, “when to fuse”, and “how to fuse”.
 - We analyze the critical challenges and open questions in radar-camera fusion, and put forward potential research directions.
 </div>
