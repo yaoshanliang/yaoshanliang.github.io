@@ -21,11 +21,10 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 <a href='https://scholar.google.com/citations?user=SHLZ-cYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
-
 # 🔥 News
 - *2025.03*: &nbsp;🎉🎉 A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908).
-- *2024.06*: &nbsp; A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852).
-- *2024.09*: &nbsp; Radar-Camera Fusion is a Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176).
+- *2024.06*: &nbsp;🌟 A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852).
+- *2024.09*: &nbsp; Radar-Camera Fusion is a Highly Cited Paper 🏆 by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176).
 - *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711). 
 
 # 📝 Publications 
@@ -99,8 +98,6 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 - *2021.09 - 2024.11*, Ph.D. in Computer Science and Software Engineering, University of Liverpool.
 - *2019.09 - 2021.04*, M.S. in Applied Informatics, University of Liverpool.
 - *2012.08 - 2016.06*, B.E. in Software Engineering, Soochow University.
-
-# 💬 Invited Talks
 
 
 # 💻 Services
