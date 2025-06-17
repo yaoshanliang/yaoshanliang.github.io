@@ -22,7 +22,8 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 
 
 # 🔥 News
-- *2025.03*: &nbsp;🎉🎉 A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908).
+- *2025.06*: &nbsp;🎉🎉 A USV-based object tracking dataset in inland waterways is accepted by IROS.
+- *2025.03*: &nbsp;🎉 A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908).
 - *2024.06*: &nbsp;🌟 A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852).
 - *2024.09*: &nbsp; Radar-Camera Fusion is a Highly Cited Paper 🏆 by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176).
 - *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711). 
@@ -44,6 +45,25 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 - It can be applied in multiple tasks, such as object detection, instance segmentation, semantic segmentation, free-space segmentation, and waterline segmentation.
 </div>
 </div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS</div><img src='images/USVTrack.png' alt="" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways]()
+
+**Shanliang Yao**, Runwei Guan, Yi Ni, Yong Yue, Xiaohui Zhu, Ryan Wen Liu.
+
+[[**Website**]](https://usvtrack.github.io) 
+[![](https://img.shields.io/github/stars/usvtrack/usvtrack?style=social&label=Code+Stars)](https://github.com/usvtrack/usvtrack) 
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:U_HPUtbDl20C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
+- The first USV-based 4D radar-camera tracking dataset for autonomous driving in waterborne transportation systems, providing comprehensive data from four sensors: a 4D radar, a monocular optical camera, a GPS and an IMU.
+- USVTrack contains a rich diversity of data samples, including various waterways (wide and narrow rivers, lakes, canals, moats and docks), diverse time conditions (daytime, nightfall, night), weather conditions (sunny, overcast, rainy, snowy), and lighting conditions (normal, dim, strong).
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TITS</div><img src='images/RadarPerception.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
