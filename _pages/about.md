@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicles, and Intelligent Transportation Systems.
-<a href='https://scholar.google.com/citations?user=SHLZ-cYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+<a href='https://scholar.google.com/citations?user=SHLZ-cYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>.
 
 
 # 🔥 News
@@ -57,7 +57,7 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 
 [[**Website**]](https://usvtrack.github.io) 
 [![](https://img.shields.io/github/stars/usvtrack/usvtrack?style=social&label=Code+Stars)](https://github.com/usvtrack/usvtrack) 
-<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:U_HPUtbDl20C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:hefNtdE4IMkC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:hefNtdE4IMkC'></span>
 - The first USV-based 4D radar-camera tracking dataset for autonomous driving in waterborne transportation systems, providing comprehensive data from four sensors: a 4D radar, a monocular optical camera, a GPS and an IMU.
 - USVTrack contains a rich diversity of data samples, including various waterways (wide and narrow rivers, lakes, canals, moats and docks), diverse time conditions (daytime, nightfall, night), weather conditions (sunny, overcast, rainy, snowy), and lighting conditions (normal, dim, strong).
