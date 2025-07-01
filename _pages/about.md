@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and Intelligent Transportation Systems.
+My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicles, and Intelligent Transportation Systems.
 <a href='https://scholar.google.com/citations?user=SHLZ-cYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
@@ -51,14 +51,14 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS</div><img src='images/USVTrack.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways]()
+[USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737)
 
 **Shanliang Yao**, Runwei Guan, Yi Ni, Yong Yue, Xiaohui Zhu, Ryan Wen Liu.
 
 [[**Website**]](https://usvtrack.github.io) 
 [![](https://img.shields.io/github/stars/usvtrack/usvtrack?style=social&label=Code+Stars)](https://github.com/usvtrack/usvtrack) 
 <img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:U_HPUtbDl20C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
-<span class='show_paper_citations' data='SHLZ-cYAAAAJ:e84hm74t-eoC'></span>
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:hefNtdE4IMkC'></span>
 - The first USV-based 4D radar-camera tracking dataset for autonomous driving in waterborne transportation systems, providing comprehensive data from four sensors: a 4D radar, a monocular optical camera, a GPS and an IMU.
 - USVTrack contains a rich diversity of data samples, including various waterways (wide and narrow rivers, lakes, canals, moats and docks), diverse time conditions (daytime, nightfall, night), weather conditions (sunny, overcast, rainy, snowy), and lighting conditions (normal, dim, strong).
 </div>
@@ -98,7 +98,12 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 </div>
 </div>
 
-- [WaterVG: Waterway Visual Grounding Based on Text-Guided Vision and mmWave Radar](https://ieeexplore.ieee.org/document/10847630/). Runwei Guan, Liye Jia, **Shanliang Yao**, Fengyufan Yang, Erick Purwanto, Xiaohui Zhu, Eng Gee Lim, Jeremy Smith, Ka Lok Man, Xuming Hu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*, 2025, Early Access, doi: 10.1109/TITS.2025.3527011.
+
+- [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737). **Shanliang Yao**, Runwei Guan, Yi Ni, Yong Yue, Xiaohui Zhu, Ryan Wen Liu. *2025 38th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)*, Hangzhou, China, 2025.
+- [Exploring Radar Data Representations in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10952908). **Shanliang Yao**, Runwei Guan, Zitian Peng, Chenhang Xu, Yilu Shi, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*. 2025, 26(6): 7401-7425, doi: 10.1109/TITS.2025.3554781.
+- [WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmarks for Autonomous Driving on Water Surfaces](https://ieeexplore.ieee.org/document/10571852). **Shanliang Yao**, Runwei Guan, Zhaodong Wu, Yi Ni, Zile Huang, Ryan Wen Liu, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*, 2024, 25(11): 16584-16598, doi: 10.1109/TITS.2024.3415772.
+- [Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10225711). **Shanliang Yao**, Runwei Guan, Xiaoyu Huang, Zhuoxiao Li, Xiangyu Sha, Yong Yue, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Vehicles*, 2024, 9(1): 2094-2128, doi: 10.1109/TIV.2023.3307157.
+- [WaterVG: Waterway Visual Grounding Based on Text-Guided Vision and mmWave Radar](https://ieeexplore.ieee.org/document/10847630/). Runwei Guan, Liye Jia, **Shanliang Yao**, Fengyufan Yang, Erick Purwanto, Xiaohui Zhu, Eng Gee Lim, Jeremy Smith, Ka Lok Man, Xuming Hu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*, 2025, vol. 26, no. 5, pp. 7275-7291, doi: 10.1109/TITS.2025.3527011.
 - [ASY-VRNet: Waterway Panoptic Driving Perception Model Based on Asymmetric Fair Fusion of Vision and 4D mmWave Radar](https://ieeexplore.ieee.org/document/10802447). Runwei Guan, **Shanliang Yao**, Xiaohui Zhu, Ka Lok Man, Yong Yue, Jeremy Smith, Eng Gee Lim, Yutao Yue. *2024 37th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)*, Abu Dhabi, United Arab Emirates, 2024, 12479-12486, doi: 10.1109/IROS58592.2024.10802447.
 - [Achelous: A Fast Unified Water-Surface Panoptic Perception Framework Based on Fusion of Monocular Camera and 4D mmWave Radar](https://ieeexplore.ieee.org/document/10422325). Runwei Guan, **Shanliang Yao**, Xiaohui Zhu, Ka Lok Man, Eng Gee Lim, Jeremy Smith, Yong Yue, Yutao Yue. *2023 IEEE 26th International Conference on Intelligent Transportation Systems (ITSC 2023)*, Bilbao, Spain, 2023, 182-188, doi: 10.1109/ITSC 57777.2023.10422325.
 - [Mask-VRDet: A Robust Riverway Panoptic Perception Model Based on Dual Graph Fusion of Vision and 4D mmWave Radar](https://www.sciencedirect.com/science/article/abs/pii/S0921889023002117). Runwei Guan, **Shanliang Yao**, Lulu Liu, Xiaohui Zhu, Ka Lok Man, Yong Yue, Jeremy Smith, Eng Gee Lim, Yutao Yue. *Robotics and Autonomous Systems*, 2024, 171: 104572, doi: 10.1016/j.robot.2023.104572.
@@ -118,5 +123,5 @@ My research interests include Multimodal Fusion, Unmanned Surface Vehicles, and 
 
 
 # 💻 Services
-- Reviewer of TITS, TIV, TCSVT, TMC, RAL, ICRA, IROS, etc.
+- Reviewer of TITS, TIV, TCSVT, TMC, RAL, ICRA, IROS, PR, etc.
 
