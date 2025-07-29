@@ -34,7 +34,7 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 
 [WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmarks for Autonomous Driving on Water Surfaces](https://ieeexplore.ieee.org/document/10571852)
 
-**Shanliang Yao**, Runwei Guan, Zhaodong Wu, Yi Ni, Ryan Wen Liu, Yong Yue, Xiaohui Zhu, Yutao Yue, etc.
+**Shanliang Yao**, Runwei Guan, Ryan Wen Liu, Yong Yue, Xiaohui Zhu, Yutao Yue, etc.
 
 [[**Website**]](https://waterscenes.github.io) 
 [![](https://img.shields.io/github/stars/WaterScenes/WaterScenes?style=social&label=Code+Stars)](https://github.com/WaterScenes/WaterScenes) 
@@ -52,7 +52,7 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 
 [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737)
 
-**Shanliang Yao**, Runwei Guan, Yi Ni, Yong Yue, Xiaohui Zhu, Ryan Wen Liu.
+**Shanliang Yao**, Runwei Guan, Sen Xu, Yong Yue, Xiaohui Zhu, Ryan Wen Liu, etc.
 
 [[**Website**]](https://usvtrack.github.io) 
 [![](https://img.shields.io/github/stars/usvtrack/usvtrack?style=social&label=Code+Stars)](https://github.com/usvtrack/usvtrack) 
@@ -98,7 +98,7 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 </div>
 
 
-- [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737). **Shanliang Yao**, Runwei Guan, Yi Ni, Yong Yue, Xiaohui Zhu, Ryan Wen Liu. *2025 38th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)*, Hangzhou, China, 2025.
+- [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737). **Shanliang Yao**, Runwei Guan, Yi Ni, Sen Xu, Yong Yue, Xiaohui Zhu, Ryan Wen Liu. *2025 38th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)*, Hangzhou, China, 2025.
 - [Exploring Radar Data Representations in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10952908). **Shanliang Yao**, Runwei Guan, Zitian Peng, Chenhang Xu, Yilu Shi, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*. 2025, 26(6): 7401-7425, doi: 10.1109/TITS.2025.3554781.
 - [WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmarks for Autonomous Driving on Water Surfaces](https://ieeexplore.ieee.org/document/10571852). **Shanliang Yao**, Runwei Guan, Zhaodong Wu, Yi Ni, Zile Huang, Ryan Wen Liu, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*, 2024, 25(11): 16584-16598, doi: 10.1109/TITS.2024.3415772.
 - [Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10225711). **Shanliang Yao**, Runwei Guan, Xiaoyu Huang, Zhuoxiao Li, Xiangyu Sha, Yong Yue, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Vehicles*, 2024, 9(1): 2094-2128, doi: 10.1109/TIV.2023.3307157.
