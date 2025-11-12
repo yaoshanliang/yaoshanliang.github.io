@@ -73,8 +73,8 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 
 [[**Website**]](https://radar-camera-fusion.github.io/radar) [Github](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Perception)
 [![](https://img.shields.io/github/stars/Radar-Camera-Fusion/Awesome-Radar-Perception?style=social&label=Code+Stars)](https://github.com/Radar-Camera-Fusion/Awesome-Radar-Perception) 
-<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:Vztgr1qGG8IC.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
-<span class='show_paper_citations' data='SHLZ-cYAAAAJ:Vztgr1qGG8IC'></span>
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:BW2nPTmhBn4C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:BW2nPTmhBn4C'></span>
 - We offer an up-to-date (2019-2024) overview of radar-based datasets and algorithms, providing in-depth research on their advantages and limitations.
 - We analyze the significant challenges and open questions related to these data representations, and propose potential research directions for further investigation.
 </div>
