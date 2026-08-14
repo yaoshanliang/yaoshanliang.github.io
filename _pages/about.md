@@ -21,11 +21,11 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 
 
 # 🎉 News
-- *2026.04*: &nbsp; GIF-Calib: A 4D Radar-Camera Calibration method is accepted by [Information Fusion](sciencedirect.com/science/article/pii/S1566253526003891).
-- *2025.06*: &nbsp; USVTrack: A USV-based object tracking dataset in inland waterways is accepted by [IROS](https://ieeexplore.ieee.org/document/11246786).
-- *2025.03*: &nbsp; A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908), 🔥Hot Paper and 🏆Highly Cited Paper  by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001470587300001). 
-- *2024.06*: &nbsp; WaterScenes: A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852), 🔥Hot Paper and 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001258836400001). 
-- *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711), 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176). 
+- *2026.04*: GIF-Calib: A 4D Radar-Camera Calibration method is accepted by [Information Fusion](sciencedirect.com/science/article/pii/S1566253526003891).
+- *2025.06*: USVTrack: A USV-based object tracking dataset in inland waterways is accepted by [IROS](https://ieeexplore.ieee.org/document/11246786).
+- *2025.03*: A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908), 🔥Hot Paper and 🏆Highly Cited Paper  by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001470587300001). 
+- *2024.06*: WaterScenes: A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852), 🔥Hot Paper and 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001258836400001). 
+- *2023.08*: A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711), 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176). 
 
 # 📝 Publications 
 
@@ -131,9 +131,9 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 - *2020* The 6th ‘Internet+’ Student Innovation and Entrepreneurship Competition, Second Prize in Jiangsu Provincial Competition
 
 # 📖 Educations and Working Experience
-- *2026.07 - now, Associate Professor in School of Information Engineering, Yancheng Institute of Technology.
-- *2026.01 - now, Postdoctoral Researcher with School of Navigation, Wuhan University of Technology.
-- *2025.01 - 2026.07, Lecturer School of Information Engineering, Yancheng Institute of Technology.
+- *2026.07 - now*, Associate Professor in School of Information Engineering, Yancheng Institute of Technology.
+- *2026.01 - now*, Postdoctoral Researcher with School of Navigation, Wuhan University of Technology.
+- *2025.01 - 2026.07*, Lecturer School of Information Engineering, Yancheng Institute of Technology.
 - *2021.09 - 2024.11*, Ph.D. in Computer Science and Software Engineering, University of Liverpool.
 - *2019.09 - 2021.04*, M.S. in Applied Informatics, University of Liverpool.
 - *2012.08 - 2016.06*, B.E. in Software Engineering, Soochow University.
