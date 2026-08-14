@@ -20,12 +20,12 @@ redirect_from:
 My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicles and Intelligent Transportation Systems.
 
 
-# 🔥 News
-- *2025.06*: &nbsp;🎉🎉 A USV-based object tracking dataset in inland waterways is accepted by IROS.
-- *2025.03*: &nbsp;🎉 A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908).
-- *2024.06*: &nbsp;🌟 A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852).
-- *2024.09*: &nbsp; Radar-Camera Fusion is a Highly Cited Paper 🏆 by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176).
-- *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711). 
+# 🎉 News
+- *2026.04*: &nbsp; GIF-Calib: A 4D Radar-Camera Calibration method is accepted by [Information Fusion](sciencedirect.com/science/article/pii/S1566253526003891).
+- *2025.06*: &nbsp; USVTrack: A USV-based object tracking dataset in inland waterways is accepted by [IROS](https://ieeexplore.ieee.org/document/11246786).
+- *2025.03*: &nbsp; A survey for Radar Data Representations is accepted by [TITS](https://ieeexplore.ieee.org/document/10952908), 🔥Hot Paper and 🏆Highly Cited Paper  by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001470587300001). 
+- *2024.06*: &nbsp; WaterScenes: A 4D Radar-Camera Fusion Dataset is accepted by [TITS](https://ieeexplore.ieee.org/document/10571852), 🔥Hot Paper and 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001258836400001). 
+- *2023.08*: &nbsp; A survey for Radar-Camera Fusion is accepted by [TIV](https://ieeexplore.ieee.org/document/10225711), 🏆Highly Cited Paper by [WOS](https://www.webofscience.com/wos/woscc/full-record/WOS:001173317800176). 
 
 # 📝 Publications 
 
@@ -46,11 +46,10 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 </div>
 
 
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS</div><img src='images/USVTrack.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737)
+[USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://ieeexplore.ieee.org/document/11246786)
 
 **Shanliang Yao**, Runwei Guan, Sen Xu, Yong Yue, Xiaohui Zhu, Ryan Wen Liu, etc.
 
@@ -60,6 +59,22 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 <span class='show_paper_citations' data='SHLZ-cYAAAAJ:hefNtdE4IMkC'></span>
 - The first USV-based 4D radar-camera tracking dataset for autonomous driving in waterborne transportation systems, providing comprehensive data from four sensors: a 4D radar, a monocular optical camera, a GPS and an IMU.
 - USVTrack contains a rich diversity of data samples, including various waterways (wide and narrow rivers, lakes, canals, moats and docks), diverse time conditions (daytime, nightfall, night), weather conditions (sunny, overcast, rainy, snowy), and lighting conditions (normal, dim, strong).
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Fusion</div><img src='images/GIF-Calib.png' alt="" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GIF-Calib: Geometry-Intensity Fusion for 4D Radar-Camera Calibration in Autonomous Driving Vehicles](https://www.sciencedirect.com/science/article/abs/pii/S1566253526003891)
+
+**Shanliang Yao**, Zhuoxiao Li, Runwei Guan, Meng Xia, Fuping Hu, Kebin Cao, Sen Xu, Xiaohui Zhu, Ryan Wen Liu, Weiping Ding
+
+<img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/yaoshanliang/yaoshanliang.github.io/google-scholar-stats/gs_data.json&query=$.publications.SHLZ-cYAAAAJ:ufKn5pxu7C0C.num_citations&logo=Google%20Scholar&label=citations&color=9cf&labelColor=f6f6f6&style=flat">
+<span class='show_paper_citations' data='SHLZ-cYAAAAJ:ufKn5pxu7C0C'></span>
+- A composite calibration target that integrates a chessboard pattern with a central corner reflector.
+- Geometry-intensity fusion framework combining geometric constraints with radar reflection intensity.
+- Robust cross-modal correspondence establishment with nonlinear fusion optimization.
+- Cross-domain experimental validation in both road-based and water-based environments.
 </div>
 </div>
 
@@ -97,8 +112,8 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 </div>
 </div>
 
-
-- [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://arxiv.org/abs/2506.18737). **Shanliang Yao**, Runwei Guan, Yi Ni, Sen Xu, Yong Yue, Xiaohui Zhu, Ryan Wen Liu. *2025 38th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)*, Hangzhou, China, 2025.
+- [GIF-Calib: Geometry-Intensity Fusion for 4D Radar-Camera Calibration in Autonomous Driving Vehicles](https://www.sciencedirect.com/science/article/abs/pii/S1566253526003891). **Shanliang Yao**, Zhuoxiao Li, Runwei Guan, Meng Xia, Fuping Hu, Kebin Cao, Sen Xu, Xiaohui Zhu, Ryan Wen Liu, Weiping Ding. *Information Fusion*. 2026, doi: 10.1016/j.inffus.2026.104510.
+- [USVTrack: USV-Based 4D Radar-Camera Tracking Dataset for Autonomous Driving in Inland Waterways](https://ieeexplore.ieee.org/document/11246786). **Shanliang Yao**, Runwei Guan, Yi Ni, Sen Xu, Yong Yue, Xiaohui Zhu, Ryan Wen Liu. *2025 38th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)*, Hangzhou, China, 2025.
 - [Exploring Radar Data Representations in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10952908). **Shanliang Yao**, Runwei Guan, Zitian Peng, Chenhang Xu, Yilu Shi, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*. 2025, 26(6): 7401-7425, doi: 10.1109/TITS.2025.3554781.
 - [WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmarks for Autonomous Driving on Water Surfaces](https://ieeexplore.ieee.org/document/10571852). **Shanliang Yao**, Runwei Guan, Zhaodong Wu, Yi Ni, Zile Huang, Ryan Wen Liu, Yong Yue, Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Jieming Ma, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Transportation Systems*, 2024, 25(11): 16584-16598, doi: 10.1109/TITS.2024.3415772.
 - [Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review](https://ieeexplore.ieee.org/document/10225711). **Shanliang Yao**, Runwei Guan, Xiaoyu Huang, Zhuoxiao Li, Xiangyu Sha, Yong Yue, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu, Yutao Yue. *IEEE Transactions on Intelligent Vehicles*, 2024, 9(1): 2094-2128, doi: 10.1109/TIV.2023.3307157.
