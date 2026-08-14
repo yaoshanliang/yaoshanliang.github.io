@@ -130,12 +130,15 @@ My research interests include Multimodal Sensor Fusion, Unmanned Surface Vehicle
 - *2022* The 12th ‘Challenge Cup’ National College Student Business Plan Competition, Bronze Award in Jiangsu Provincial Competition
 - *2020* The 6th ‘Internet+’ Student Innovation and Entrepreneurship Competition, Second Prize in Jiangsu Provincial Competition
 
-# 📖 Educations
+# 📖 Educations and Working Experience
+- *2026.07 - now, Associate Professor in School of Information Engineering, Yancheng Institute of Technology.
+- *2026.01 - now, Postdoctoral Researcher with School of Navigation, Wuhan University of Technology.
+- *2025.01 - 2026.07, Lecturer School of Information Engineering, Yancheng Institute of Technology.
 - *2021.09 - 2024.11*, Ph.D. in Computer Science and Software Engineering, University of Liverpool.
 - *2019.09 - 2021.04*, M.S. in Applied Informatics, University of Liverpool.
 - *2012.08 - 2016.06*, B.E. in Software Engineering, Soochow University.
 
 
 # 💻 Services
-- Reviewer of TITS, TIV, TCSVT, TMC, RAL, ICRA, IROS, PR, etc.
+- Reviewer of TITS, TIV, TCSVT, TMC, Information Fusion, Information Science, RAL, ICRA, IROS, PR, etc.
 
